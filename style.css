@@ -1,15 +1,24 @@
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
   display: grid;
-  gap: 60px;
   justify-items: center;
   margin-top: 0%;
   background-color: #bf7154;
+  width: 100%;
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -56,6 +65,7 @@ p {
   color: #000000;
   text-transform: uppercase;
   border: 2px solid #fff;
+  font-weight: 500;
 }
 
 .menu a:hover {
@@ -65,7 +75,8 @@ p {
 .conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 1000px;
+  width: 100%;
+  max-width: 1280px;
 }
 
 .introducao {
@@ -115,7 +126,7 @@ p {
 }
 
 .vantagens-item:hover {
-  border-color: #e21;
+  border-color: #733925;
 }
 
 .vantagens-item p {
@@ -131,11 +142,7 @@ p {
   }
 }
 
-@media (max-width: 600px) {
-  body {
-    gap: 30px;
-    margin-top: 20px;
-  }
+@media (max-width: 680px) {
   .header {
     gap: 30px;
   }
@@ -152,9 +159,28 @@ p {
   .subtitulo {
     font-size: 3rem;
   }
+
+  /**/
+
+  footer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  footer div {
+    padding: 8px;
+  }
+
+  .logo-footer {
+    display: none;
+  }
+
+  .divisor {
+    display: none;
+  }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .subtitulo {
     font-size: 2rem;
   }
@@ -194,4 +220,93 @@ div article h1 {
 
 article p {
   margin-bottom: 20px;
+}
+
+footer {
+  display: flex;
+
+  background-color: #733925;
+  gap: 8px;
+  padding: 8px;
+  max-width: 1280px;
+}
+
+.logo-footer {
+  width: 20%;
+}
+.logo-footer img {
+  width: 80%;
+}
+.contatos {
+  min-width: 30%;
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #f7f7f7;
+}
+.contatos h3 {
+  padding: 10px 0;
+  font-weight: 700;
+}
+.contatos p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 1rem;
+}
+.contatos a {
+  color: #ccc;
+  text-decoration: none;
+}
+.divisor {
+  height: 1px;
+  width: 100%;
+  margin-top: 8px;
+  background-color: #cccccc33;
+}
+.redes {
+  display: flex;
+  font-size: 32px;
+}
+
+.redes a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.redes a:hover {
+  background-color: #bf7154;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  color: #733925;
+}
+
+.maps {
+  min-width: 50%;
+}
+
+.dev-direitos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1280px;
+  background-color: #733925;
+  padding: 8px;
+}
+.dev-direitos p {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.dev-direitos span {
+  color: #733925;
+  font-size: 18px;
+}
+.dev-direitos a {
+  color: #ccc;
+  text-decoration: none;
+  text-decoration: underline;
 }
